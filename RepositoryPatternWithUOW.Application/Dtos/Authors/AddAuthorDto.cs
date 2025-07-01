@@ -1,4 +1,4 @@
-﻿namespace RepositoryPatternWithUOW.Application.Dtos
+﻿namespace RepositoryPatternWithUOW.Application.Dtos.Authors
 {
     public class AddAuthorDto
     {

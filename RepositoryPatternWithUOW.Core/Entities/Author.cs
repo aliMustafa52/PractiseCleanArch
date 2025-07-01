@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace RepositoryPatternWithUOW.Domain.Entities
 {
-    public class Author
+    public class Author : BaseEntity
     {
-        public int Id { get; set; }
-
         [MaxLength(150)]
         public string Name { get; set; } = string.Empty;
 

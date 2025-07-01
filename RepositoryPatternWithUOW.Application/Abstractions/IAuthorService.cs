@@ -1,4 +1,4 @@
-﻿using RepositoryPatternWithUOW.Application.Dtos;
+﻿using RepositoryPatternWithUOW.Application.Dtos.Authors;
 using RepositoryPatternWithUOW.Application.ViewModels.Authors;
 using RepositoryPatternWithUOW.Domain.Abstractions;
 

@@ -41,7 +41,8 @@ builder.Services
     .AddFluentValidationAutoValidation()
     .AddValidatorsFromAssembly(typeof(ApplicationAssemblyMarker).Assembly);
 // register services
-builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+//builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 

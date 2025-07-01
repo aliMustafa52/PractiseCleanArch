@@ -1,9 +1,8 @@
 ﻿using Mapster;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryPatternWithUOW.Api.Extensions;
 using RepositoryPatternWithUOW.Application.Abstractions;
-using RepositoryPatternWithUOW.Application.Dtos;
+using RepositoryPatternWithUOW.Application.Dtos.Authors;
 using RepositoryPatternWithUOW.Application.ViewModels.Authors;
 
 namespace RepositoryPatternWithUOW.Api.Controllers
@@ -27,7 +26,7 @@ namespace RepositoryPatternWithUOW.Api.Controllers
         [HttpPost("")]
         public async Task<IActionResult> AddAuthor([FromBody] AuthorRequest request, CancellationToken cancellationToken)
         {
-            var authorDto = request.Adapt<AuthorDto>();
+            var authorDto = request.Adapt<AddAuthorDto>();
             var result = await _authorService.AddAsync(authorDto, cancellationToken);
 
             return result.IsSuccess
